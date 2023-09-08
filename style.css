@@ -6,30 +6,40 @@
 	vertical-align: baseline;
     text-align: left;
     font-family: sans-serif;
-    font-size: 15px;
 }
 
 body {
     width: 320px;
+    height: 568px;
     background-color: rgb(62, 61, 61);
     color: white;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 h1 {
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 1;
+}
+
+ul {
+    width: 300px;
+    height: 550px;
 }
 
 #dots {
+    position: relative;
+    top: -120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,11 +69,25 @@ ul, li {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid cornflowerblue;
     background-color: cornflowerblue;
     background-clip: content-box;
     transition: transform 0.1s;
 }
+
+.button:hover {
+    background-color: ghostwhite;
+    border: 2px solid ghostwhite;
+}
+
+.button:active {
+    background-color: transparent;
+}
+
+/* .button нажатый {
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+} */
 
 a {
     text-decoration: none; 
@@ -71,23 +95,23 @@ a {
 }
 
 a:hover {
-    cursor: pointer;
+    cursor: pointer;  
 }
-
+  
 img {
     width: 100%;
 }
 
 p {
- position: absolute;
- top: 250px;
- z-index: 1;
+ margin-top: 55px;
 }
 
 .images-list {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
 
 .carousel-item {
